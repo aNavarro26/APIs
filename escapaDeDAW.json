@@ -1,0 +1,120 @@
+{
+  "start": {
+    "id": 1,
+    "enunciado": "Bienvenido al Escape Room de Escapa de DAW. Te enfrentarás a diferentes pruebas desafiantes, para empezar ves al endpoint /primera_prueba."
+  },
+  "primera_prueba": {
+    "id": 2,
+    "enunciado": "Te despiertas en el laboratorio de DAW donde tendrás que escapar. Se acerca unos de los científicos y te da la siguiente prueba: Tienes que borrar la etiqueta HTML que menos se utiliza y que el cientifico Oriol Roca se volveria loco si la viera. 👎👎 GET /html para acceder a la prueba. Tendrás que generar un codigo para acceder a la siguiente prueba haciendo un GET de este. Fijate en el numero del ID."
+  },
+  "html": [
+    {
+      "id": "3",
+      "etiqueta": "<meta>",
+      "secret_code": "Zz"
+    },
+    {
+      "id": "1",
+      "etiqueta": "<head>",
+      "secret_code": "fx"
+    },
+    {
+      "id": "5",
+      "etiqueta": "<body>",
+      "secret_code": "ls"
+    },
+    {
+      "id": "4",
+      "etiqueta": "<br>",
+      "secret_code": "gK"
+    },
+    {
+      "id": "2",
+      "etiqueta": "<h1>",
+      "secret_code": "16"
+    }
+  ],
+  "fx16Zzls": [
+    {
+      "enunciado": "El director Pau necesita que descubras que comando sirve para crear y moverte de rama en un mismo comando de git (enviar en respuesta3). Si lo consigues te dejará que avances a la planta superior. Utiliza como endpoint tu respuesta dada en 'respuesta3'.",
+      "resposta1": "git b_____ [nombreRama] (5 caracteres)",
+      "resposta2": "git ch____ [nombreRama] (6 caracteres)",
+      "resposta3": "git ________ -b [nombreRama] (8 caracteres)"
+    }
+  ],
+  "checkout": {
+    "id": 3,
+    "enunciado": "SQLMAN anteriormente conocido como 'Jordi', está muy enfadado con sus chikis y ellos necesitan tu ayuda. Si consigues resolver la siguiente consulta te proporcionaran el codigo para acceder a la siguiente prueba. La biblioteca de SQL_CITY necesita identificar los libros que aún no han sido devueltos y que fueron escritos por un autor determinado (Martin Martin). Se debe proporcionar una lista de estos libros, ordenada por la fecha de préstamo en orden descendente y limitada a un máximo de 10 resultados. Los chikis te dan una pista en /modelo",
+    "consulta_SQL_incompleta": "SELECT 📖.? AS Libro, 🖊️.? AS Autor, 🪙.?, 🧑🏻.? FROM 📖 JOIN 🖊️ ON 📖.? = 🖊️.? JOIN 🪙 ON 📖.? = 🪙.? JOIN 🧑🏻 ON 🪙.? = 🧑🏻.? WHERE 🪙.? IS NULL AND 🧑🏻.? = '?  ?' ORDER BY 🪙.? DESC 🛑 ??;"
+  },
+  "modelo": {
+    "id": 4,
+    "pistaAdicional": "Con una combinacion exacta de letras podrás ir a /????, donde cada ? se refiere a una letra, recuerda que puede que la base de datos sea Oracle 😉",
+    "model1": "https://drive.google.com/file/d/1pdiqGRwod54k2jqxbARGe1BAZ7JTjIrp/view?usp=sharing",
+    "model2": "https://drive.google.com/file/d/1amu5Hb_8bfZMgtPwmoUZWZ4_wIXubjSa/view?usp=sharing"
+  },
+  "PLAL": {
+    "id": 5,
+    "libros": "CREATE TABLE libros (id NUMBER PRIMARY KEY,titulo VARCHAR2(100),autor_id NUMBER,anio_publicacion NUMBER,editorial VARCHAR2(100),ISBN VARCHAR2(20),FOREIGN KEY (autor_id) REFERENCES autores(id));",
+    "autores": "CREATE TABLE autores (id NUMBER PRIMARY KEY,nombre VARCHAR2(100),nacionalidad VARCHAR2(50));",
+    "prestamos": "CREATE TABLE prestamos (id NUMBER PRIMARY KEY,libro_id NUMBER,lector_id NUMBER,fecha_prestamo DATE,fecha_devolucion DATE,FOREIGN KEY (libro_id) REFERENCES libros(id),FOREIGN KEY (lector_id) REFERENCES lectores(id));",
+    "lectores": "CREATE TABLE lectores (id NUMBER PRIMARY KEY,nombre VARCHAR2(100),direccion VARCHAR2(200),telefono VARCHAR2(15));",
+    "PISTA": "En la prueba /checkout el codigo de acceso será juntando la primera letra de lo que has escrito en los emojis e interrogantes '?', en total son 34 caracteres que puede haber letras/numeros. Si en la consulta hay un 2384382 que has escrito tú, el primer caracter seria el 2."
+  },
+  "ltanpfunlalaaipliplupuuipfanmmpfl10": {
+    "id": 6,
+    "enunciado": "Los chikis te lo han agradecido mucho pero ahora te encuentras con unos de los ejecutivos, el mismisimo Antonio Limón . Para poder pasar la puerta necesitarás generar un código. En un momento dado por la noche te encuentras con su PC encendido,accedes y no tiene interfaz gráfica. Mirando carpetas hay una carpeta 'codigosPuerta' que para acceder se necesita otro codigo.En la misma habitación hay 2 melones con pistas. /melon1 y /melon2. Una vez el codigo encontrado ves a /tucodigo para entrar en la carpeta.",
+    "CodigoPC": ""
+  },
+  "melon1": {
+    "id": 7,
+    "secuencia": "-5"
+  },
+  "melon2": {
+    "id": 8,
+    "??????": "/hostmaster"
+  },
+  "hostmaster": {
+    "id": 9,
+    "enunciado": "¡Saludos, intrépido explorador digital!Soy la IA alojada en el servidor de Hostmaster de 🍋 Antonio Limon 🍋 y te doy la bienvenida a esta emocionante mini prueba cibernética. Para continuar en nuestro viaje, necesitarás seguir hacia otro destino, pero para desbloquear el acceso, primero debes resolver un desafío.Te proporcionaré la palabra 'regedit'. Tu tarea es juntar cada dos letras en el siguiente orden: 're', 'ge', 'di' y 't'. Luego, deberás convertir cada letra en su correspondiente valor ASCII y multiplicar las parejas de letras entre sí. Finalmente, sumarás los resultados de cada pareja.Una vez que obtengas este número, úsalo como parte de la URL para acceder al siguiente destino en nuestra fascinante aventura cibernética.¡Buena suerte, y que la fuerza de los bits esté contigo!"
+  },
+  "32533": {
+    "id": 10,
+    "enunciado": "Has entrado en la carpeta! Descifra este codigo para abrir la puerta de la habitación!",
+    "cifrado": "cesar",
+    "palabra_cifrada": "gdipsqnrdiyjrn",
+    "pista": "Puedes mirar en internet que puede ser"
+  },
+  "linuxvswindows": {
+    "id": 11,
+    "enunciat": "Por el pasillo te fijas a través de una ventana a un señor misterioso con boina, gafas de sol y fumando, va de incógnito. Por el mismo pasillo te interrumpe Pere que està molt empipat perquè l'empipa que vulguis escapar del laboratori. Per avançar adapta el següent embarbussament al Català amb 'Pere' i 'Empipat' 'El cielo está enladrillado, ¿quién lo desenladrillará? El desenladrillador que lo desenlandrille, buen desenladrillador será.'",
+    "pista": "Per anar a la següent prova has d'anar a l'endpoint posant quantes síl·labes té la teva resposta que has donat que es una frase.",
+    "resposta": ""
+  },
+  "35": {
+    "id": 12,
+    "🤑examen🤑": "Arriba el teu examen favorit 😉. El Paraulogic! Donada la següent seqüencia de lletres 'Y,S,O,T,A,R' has de enviar 1 pel·licula en majúscules. ",
+    "pista": "Has d'anar al /PApplet a investigar",
+    "peli": ""
+  },
+  "PApplet": {
+    "id": 13,
+    "pista": "https://drive.google.com/file/d/1Kek5LmAPqi-y9OG4LWBhJDqlxQovyLXY/view?usp=sharing"
+  },
+  "IntelliJ": {
+    "id": 14,
+    "pistaPelicula": "🤠🚀🧸👶🏻"
+  },
+  "TOYSTORY": {
+    "id": 15,
+    "enunciat": "El cientifico Oriol esta muy 👎enfadado👎 y necesita feedback de css, si consigues calmarlo podras pasar al siguiente nivel. Oriol necesita saber cual de estos codigos css es correcto, este es su html: <div class=\"container\"><div class=\"box\">Box 1</div><div class=\"box\">Box 2</div><div class=\"box\">Box 3</div></div>",
+    "respuestas": [
+      {
+        "grid": ".container {display: grid;grid-template-columns: repeat(3, 1fr);grid-gap: 20px;}.box {background-color: #f2f2f2;padding: 20px;margin: 10px; }",
+        "float": ".container {width: 100%;}.box {width: 30%;float: left;margin: 10px;background-color: #f2f2f2;padding: 20px;}",
+        "flex": ".container {display: flex;justify-content: space-between;}.box {width: 30%;background-color: #f2f2f2;padding: 20px;grid-gap: 10px; }"
+      }
+    ],
+    "float" : "Felicidades, has conseguido escapar del laboratorio de DAW, suerte en el segundo año... 😈"
+  }
+}
