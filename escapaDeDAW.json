@@ -114,7 +114,7 @@
         "float": ".container {width: 100%;}.box {width: 30%;float: left;margin: 10px;background-color: #f2f2f2;padding: 20px;}",
         "flex": ".container {display: flex;justify-content: space-between;}.box {width: 30%;background-color: #f2f2f2;padding: 20px;grid-gap: 10px; }"
       }
-    ],
-    "float" : "Felicidades, has conseguido escapar del laboratorio de DAW, suerte en el segundo año... 😈"
-  }
+    ]
+  },
+  "float" : "Felicidades, has conseguido escapar del laboratorio de DAW, suerte en el segundo año... 😈"
 }
